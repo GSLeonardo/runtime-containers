@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  npx:
+    container_name: npx
+    build: .
+    stdin_open: true
+    tty: true
+    env_file: .env
+    volumes:
+      - '$BIND:/app'
