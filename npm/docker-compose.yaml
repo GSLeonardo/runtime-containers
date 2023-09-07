@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  npm:
+    container_name: npm
+    build: .
+    stdin_open: true
+    tty: true
+    env_file: .env
+    volumes:
+      - '$BIND:/app'
